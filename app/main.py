@@ -20,9 +20,10 @@ origins = [
     "http://127.0.0.1:4200",
 ]
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,            # Permite peticiones desde Angular
+    allow_origins=["*"],           # Permite peticiones desde Angular
     allow_credentials=True,
     allow_methods=["*"],              # Permite todos los métodos (POST, GET, PUT, DELETE, etc.)
     allow_headers=["*"],              # Permite todos los headers
