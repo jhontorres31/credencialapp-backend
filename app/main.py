@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import RedirectResponse
 
 from . import models, schemas
-from .conexion import SessionaLocal, engine
+from .conexion import SessionLocal, engine
 
 from sqlalchemy.orm import Session
 
@@ -30,7 +30,7 @@ app.add_middleware(
 
 def get_db():
     try:
-        db = SessionaLocal()
+        db = SessionLocal()
         yield db
     finally:
         db.close()
