@@ -1,0 +1,8 @@
+Plaintext
+
+fastapi
+uvicorn
+sqlalchemy
+pymysql
+cryptography
+pydantic
